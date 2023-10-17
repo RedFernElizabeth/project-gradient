@@ -1,8 +1,12 @@
 import React from 'react';
 
+import { GradientContext } from '../GradientProvider';
+
 import styles from './Colors.module.css';
 
-function Colours({ visibleColors, colors, setColors }) {
+function Colours() {
+  const { visibleColors, setColor } = React.useContext(GradientContext);
+
   return (
     <div className={styles.colors}>
       {visibleColors.map((color, index) => {
@@ -20,10 +24,7 @@ function Colours({ visibleColors, colors, setColors }) {
                 type="color"
                 value={color}
                 onChange={(event) => {
-                  const newColors = [...colors];
-                  
-                  newColors[index] = event.target.value;
-                  setColors(newColors);
+                  setColor(index, event.target.value);
                 }}
               />
             </div>
