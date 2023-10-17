@@ -14,6 +14,9 @@ function GradientProvider({ children }) {
   const [numVisibleColors, setNumVisibleColors] = React.useState(2);
   const visibleColors = colors.slice(0, numVisibleColors);
 
+  const colorStops = visibleColors.join(', ');
+  const backgroundImage = `linear-gradient(${colorStops})`;
+
   function addColor() {
     if (numVisibleColors >= 5) {
       return;
@@ -33,13 +36,14 @@ function GradientProvider({ children }) {
   function setColor(index, value) {
     const newColors = [...colors];
                   
-    newColors[index] = value;
+    newColors[index] = value.toUpperCase();
     setColors(newColors);
   }
 
   return (
     <GradientContext.Provider value={{
       visibleColors,
+      backgroundImage,
       addColor,
       removeColor,
       setColor

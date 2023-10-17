@@ -1,0 +1,8 @@
+.outputWrapper h2 {
+  margin-bottom: 10px;
+}
+
+.outputWrapper .box {
+  padding: 10px;
+  border: 1px solid black;
+}
