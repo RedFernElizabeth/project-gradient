@@ -10,6 +10,8 @@ import styles from './GradientTool.module.css';
 function GradientTool() {
   return (
     <div className={styles.wrapper}>
+      <h1>Gradient Generator</h1>
+
       <Actions />
       
       <GradientPreview />
