@@ -1,10 +1,13 @@
 import React from 'react';
 
+import GradientProvider from '../GradientProvider';
 import GradientTool from '../GradientTool';
 
 function App() {
   return (
-    <GradientTool />
+    <GradientProvider>
+      <GradientTool />
+    </GradientProvider>
   );
 }
 
