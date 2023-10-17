@@ -1,0 +1,16 @@
+{
+  "name": "project-gradient",
+  "version": "1.0.0",
+  "dependencies": {
+    "new-component": "^5.0.2",
+    "parcel": "^2.10.0",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "dev": "parcel public/index.html",
+    "new-component": "new-component"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
